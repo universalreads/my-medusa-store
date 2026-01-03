@@ -12,9 +12,6 @@
     "start": "medusa start",
     "dev": "medusa develop",
 
-    "db:setup": "medusa db:setup",
-    "db:migrate": "medusa db:migrate",
-
     "predeploy": "medusa db:migrate",
 
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
