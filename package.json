@@ -14,6 +14,7 @@
 
     "db:setup": "medusa db:setup",
     "db:migrate": "medusa db:migrate",
+
     "predeploy": "medusa db:migrate",
 
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
@@ -24,11 +25,7 @@
     "@medusajs/admin-sdk": "2.12.3",
     "@medusajs/cli": "2.12.3",
     "@medusajs/framework": "2.12.3",
-    "@medusajs/medusa": "2.12.3",
-
-    "@medusajs/medusa/cache-redis": "2.12.3",
-    "@medusajs/medusa/event-bus-redis": "2.12.3",
-    "@medusajs/medusa/workflow-engine-redis": "2.12.3"
+    "@medusajs/medusa": "2.12.3"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.12.3",
