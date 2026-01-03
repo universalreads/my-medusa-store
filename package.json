@@ -4,23 +4,17 @@
   "description": "A starter for Medusa projects.",
   "author": "Medusa (https://medusajs.com)",
   "license": "MIT",
-  "keywords": [
-    "sqlite",
-    "postgres",
-    "typescript",
-    "ecommerce",
-    "headless",
-    "medusa"
-  ],
+  "keywords": ["sqlite", "postgres", "typescript", "ecommerce", "headless", "medusa"],
   "scripts": {
     "build": "medusa build",
-
-    "predeploy": "medusa db:migrate",
+    "seed": "medusa exec ./src/scripts/seed.ts",
 
     "start": "medusa start",
     "dev": "medusa develop",
 
-    "seed": "medusa exec ./src/scripts/seed.ts",
+    "db:setup": "medusa db:setup",
+    "db:migrate": "medusa db:migrate",
+    "predeploy": "medusa db:migrate",
 
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
@@ -30,7 +24,11 @@
     "@medusajs/admin-sdk": "2.12.3",
     "@medusajs/cli": "2.12.3",
     "@medusajs/framework": "2.12.3",
-    "@medusajs/medusa": "2.12.3"
+    "@medusajs/medusa": "2.12.3",
+
+    "@medusajs/medusa/cache-redis": "2.12.3",
+    "@medusajs/medusa/event-bus-redis": "2.12.3",
+    "@medusajs/medusa/workflow-engine-redis": "2.12.3"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.12.3",
